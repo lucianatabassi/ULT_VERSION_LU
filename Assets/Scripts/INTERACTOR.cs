@@ -19,7 +19,7 @@ public class INTERACTOR : MonoBehaviour
        RaycastHit hit;
 
 
-        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 5, capaInteract))
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 2, capaInteract))
         
         {
             if (hit.collider.GetComponent<INTERACTABLE>() != false)

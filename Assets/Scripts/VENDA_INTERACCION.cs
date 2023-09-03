@@ -5,13 +5,13 @@ using UnityEngine;
 public class VENDA_INTERACCION : MonoBehaviour
 {
     public GameObject hoja;
-    public GameObject rama;
+   // public GameObject rama;
     public GameObject venda;
     public GameObject parentObject;
     private GameObject miVenda;
 
     private bool agarroHoja = false;
-    private bool agarroRama = false;
+    //private bool agarroRama = false;
     //private bool vendaactiva = false;
 
     public AudioClip sonidoAgarrar;
@@ -36,14 +36,14 @@ public class VENDA_INTERACCION : MonoBehaviour
             audioSource.PlayOneShot(sonidoAgarrar);
         }
 
-        if (!agarroRama && Input.GetKeyDown("mouse 0") && enRango(rama))
+       /* if (!agarroRama && Input.GetKeyDown("mouse 0") && enRango(rama))
         {
             Destroy(rama); 
             agarroRama = true;
             audioSource.PlayOneShot(sonidoAgarrar);
-        }
+        }*/
 
-        if (agarroHoja && agarroRama && venda != null) 
+        if (agarroHoja  && venda != null) 
         {
            
            venda.SetActive(true);
