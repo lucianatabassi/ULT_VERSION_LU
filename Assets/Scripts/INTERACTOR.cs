@@ -8,6 +8,8 @@ public class INTERACTOR : MonoBehaviour
     public LayerMask capaInteract = 6;
     UnityEvent onInteract;
     public Camera mainCamera;
+    public AudioClip sonidoAgarrar;
+    public AudioSource audioSource;
     void Start()
     {
         
@@ -19,7 +21,7 @@ public class INTERACTOR : MonoBehaviour
        RaycastHit hit;
 
 
-        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 2, capaInteract))
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 150, capaInteract))
         
         {
             if (hit.collider.GetComponent<INTERACTABLE>() != false)
@@ -31,6 +33,7 @@ public class INTERACTOR : MonoBehaviour
 
                     Debug.Log("aaa");
                     onInteract.Invoke();
+                    Invoke("SonidoAgarrar", 0.1f);
                 }
             }
             Debug.DrawLine(mainCamera.transform.position, mainCamera.transform.forward * 2, Color.blue);
@@ -38,5 +41,10 @@ public class INTERACTOR : MonoBehaviour
              //Debug.DrawLine(transform.position, Vector3.forward * 2, Color.blue);
             // Debug.DrawRay(camara.position, look, Color.green, 14);
         }
+    }
+
+    void SonidoAgarrar()
+    {
+        audioSource.PlayOneShot(sonidoAgarrar);
     }
 }
