@@ -25,7 +25,7 @@ public class ReemplazoPorContacto : MonoBehaviour
         {
             float distanciaAB = Vector3.Distance(objetoA.transform.position, objetoB.transform.position);
 
-            if (distanciaAB < 0.5f) // Ajusta la distancia para el contacto.
+            if (Input.GetKey("mouse 0") && distanciaAB < 0.5f) // Ajusta la distancia para el contacto.
             {
                 if (sonidoDestruccionC != null && audioSource != null)
                 {

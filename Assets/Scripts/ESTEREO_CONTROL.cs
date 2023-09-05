@@ -9,7 +9,8 @@ public class ESTEREO_CONTROL : MonoBehaviour
     public Transform ojoDerecho; // Referencia a la cámara del ojo derecho
 
     private float rotacionX = 0.0f;
-    private float rotacionY = 0.0f; // Variable para la rotación horizontal
+    private float rotacionY = 0.0f; // Variable para la rotación horizontal*/
+
 
     void Start()
     {
@@ -18,13 +19,16 @@ public class ESTEREO_CONTROL : MonoBehaviour
 
     void Update()
     {
-        // Captura el movimiento del mouse en los ejes X e Y
-        rotacionY += Input.GetAxis("Mouse X") * sensibilidadMouse;
-        rotacionX -= Input.GetAxis("Mouse Y") * sensibilidadMouse;
-        rotacionX = Mathf.Clamp(rotacionX, -90.0f, 90.0f); // Limita la rotación vertical
+         //Captura el movimiento del mouse en los ejes X e Y
+         rotacionY += Input.GetAxis("Mouse X") * sensibilidadMouse;
+         rotacionX -= Input.GetAxis("Mouse Y") * sensibilidadMouse;
+         rotacionX = Mathf.Clamp(rotacionX, -90.0f, 90.0f); // Limita la rotación vertical
 
-        // Aplica la rotación en el eje Y a las cámaras de los ojos
-        ojoIzquierdo.rotation = Quaternion.Euler(rotacionX, rotacionY, 0.0f);
-        ojoDerecho.rotation = Quaternion.Euler(rotacionX, rotacionY, 0.0f);
-    }
+         // Aplica la rotación en el eje Y a las cámaras de los ojos
+         ojoIzquierdo.rotation = Quaternion.Euler(rotacionX, rotacionY, 0.0f);
+         ojoDerecho.rotation = Quaternion.Euler(rotacionX, rotacionY, 0.0f);
+     }
+       
+    
+
 }

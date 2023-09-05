@@ -34,7 +34,7 @@ public class MOV_US_ESTEREO : MonoBehaviour
         }
 
         // Aplica gravedad al personaje.
-        velocidadVertical.y += gravedad * Time.deltaTime;
-        controller.Move(velocidadVertical * Time.deltaTime);
+      /*  velocidadVertical.y += gravedad * Time.deltaTime;
+        controller.Move(velocidadVertical * Time.deltaTime);*/
     }
 }
