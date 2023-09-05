@@ -2,36 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FLOR_CONTROLADOR : MonoBehaviour
+public class CARPINCHO_CONTROLADOR : MonoBehaviour
 {
-    public GameObject flor;
+ 
+    public GameObject carpincho;
     public Transform mano;
 
     private bool activo;
 
-    public AudioClip sonidoAgarrar;
-    public AudioSource audioSource;
-
-
+    
     void Update()
     {
         if (activo == true)
         {
             if(Input.GetKey("mouse 0")) //agarra con boton izq del mouse
             {
-                flor.transform.SetParent(mano); //que la flor sea hija de la mano
-                flor.transform.position = mano.position;
-                flor.GetComponent<Rigidbody>().isKinematic = true;
-                audioSource.PlayOneShot(sonidoAgarrar);
+                carpincho.transform.SetParent(mano); //que la flor sea hija de la mano
+                carpincho.transform.position = mano.position;
+                carpincho.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
 
 
-        /*if (Input.GetKey("mouse 1")) //suelta con boton der del mouse
+        if (Input.GetKey("mouse 1")) //suelta con boton der del mouse
         {
-            flor.transform.SetParent(null);
-            flor.GetComponent<Rigidbody>().isKinematic = false;
-        }*/
+            carpincho.transform.SetParent(null);
+            carpincho.GetComponent<Rigidbody>().isKinematic = false;
+        }
     }
 
     private void OnTriggerEnter (Collider other) 
