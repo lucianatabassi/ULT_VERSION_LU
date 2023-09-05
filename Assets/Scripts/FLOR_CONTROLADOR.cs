@@ -9,7 +9,10 @@ public class FLOR_CONTROLADOR : MonoBehaviour
 
     private bool activo;
 
-    
+    public AudioClip sonidoAgarrar;
+    public AudioSource audioSource;
+
+
     void Update()
     {
         if (activo == true)
@@ -19,15 +22,16 @@ public class FLOR_CONTROLADOR : MonoBehaviour
                 flor.transform.SetParent(mano); //que la flor sea hija de la mano
                 flor.transform.position = mano.position;
                 flor.GetComponent<Rigidbody>().isKinematic = true;
+                audioSource.PlayOneShot(sonidoAgarrar);
             }
         }
 
 
-        if (Input.GetKey("mouse 1")) //suelta con boton der del mouse
+        /*if (Input.GetKey("mouse 1")) //suelta con boton der del mouse
         {
             flor.transform.SetParent(null);
             flor.GetComponent<Rigidbody>().isKinematic = false;
-        }
+        }*/
     }
 
     private void OnTriggerEnter (Collider other) 

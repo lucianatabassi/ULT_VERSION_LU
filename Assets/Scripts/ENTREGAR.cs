@@ -10,6 +10,7 @@ public class ReemplazoPorContacto : MonoBehaviour
     public GameObject objetoC;            // El objeto C que se destruirá.
     public GameObject objetoD;            // El objeto D que aparecerá.
     public GameObject feo;
+    public GameObject circulo;
     public GameObject lindo;
     public AudioClip sonidoDestruccionC;  // El clip de sonido a reproducir al destruir el objeto C.
     public AudioSource audioSource;       // El AudioSource para reproducir el sonido.
@@ -34,6 +35,7 @@ public class ReemplazoPorContacto : MonoBehaviour
                 Destroy(objetoA);
                 Destroy(objetoC);
                 Destroy(feo);
+                Destroy(circulo);
                 objetoB.SetActive(false);
                 Instantiate(objetoD, posicionObjetoD, objetoD.transform.rotation);
                 Instantiate(lindo, posicionLindo, lindo.transform.rotation);

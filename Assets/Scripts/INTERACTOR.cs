@@ -33,7 +33,7 @@ public class INTERACTOR : MonoBehaviour
 
                     Debug.Log("aaa");
                     onInteract.Invoke();
-                    Invoke("SonidoAgarrar", 0.1f);
+                   Invoke("SonidoAgarrar", 0.1f);
                 }
             }
             Debug.DrawLine(mainCamera.transform.position, mainCamera.transform.forward * 2, Color.blue);
