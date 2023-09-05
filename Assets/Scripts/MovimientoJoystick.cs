@@ -33,7 +33,7 @@ public class MovimientoJoystick : MonoBehaviour
         }
 
         // Aplica gravedad al personaje.
-        velocidadVertical.y += gravedad * Time.deltaTime;
-        controller.Move(velocidadVertical * Time.deltaTime);
+       /* velocidadVertical.y += gravedad * Time.deltaTime;
+        controller.Move(velocidadVertical * Time.deltaTime);*/
     }
 }

@@ -9,7 +9,7 @@ public class MOV_US_ESTEREO : MonoBehaviour
     public float velocidadMovimiento = 6f; // Velocidad de movimiento del personaje.
     public float velocidadRotacion = 3f;   // Velocidad de rotación del personaje.
 
-    private float gravedad = -9.81f;       // Gravedad aplicada al personaje.
+   // private float gravedad = -9.81f;       // Gravedad aplicada al personaje.
     private Vector3 velocidadVertical;      // Velocidad vertical del personaje.
 
     void Update()
