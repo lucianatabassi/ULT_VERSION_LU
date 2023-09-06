@@ -35,5 +35,6 @@ public class MOV_USUARIO : MonoBehaviour
         Vector3 mover = transform.right * x + transform.forward * z;
 
         controller.Move(mover * vel * Time.deltaTime);  
+
     }
 }
